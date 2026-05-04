@@ -13,7 +13,7 @@
  *   CUFF = Cuff
  *   YKE  = Yoke
  *
- * Reference: https://scan-erp.web.app/blog/qr-code-production-tracking-garment-factory.html
+ * Reference: https://scanerp.pro/blog/qr-code-production-tracking-garment-factory.html
  */
 
 const COMPONENT_CODES = {

@@ -4,7 +4,7 @@
  * Calculates operator wages in CMT garment factories using:
  *   pieces × rate × skill multiplier + bonuses − quality penalty
  *
- * Reference: https://scan-erp.web.app/blog/piece-rate-payment-calculation-garment-factory.html
+ * Reference: https://scanerp.pro/blog/piece-rate-payment-calculation-garment-factory.html
  */
 
 const SKILL_MULTIPLIERS = {

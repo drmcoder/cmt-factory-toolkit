@@ -3,9 +3,9 @@
 > Open-source utilities for CMT (Cut-Make-Trim) garment factory operations: SMV calculators, piece-rate formulas, line balancing helpers, and bundle ID generators.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Powered by Scan ERP](https://img.shields.io/badge/Powered%20by-Scan%20ERP-2563eb)](https://scan-erp.web.app/)
+[![Powered by Scan ERP](https://img.shields.io/badge/Powered%20by-Scan%20ERP-2563eb)](https://scanerp.pro/)
 
-Open-sourced from [Scan ERP](https://scan-erp.web.app/), a QR-based ERP for CMT garment factories. These utilities power our own production system; published here so other factory developers can use them.
+Open-sourced from [Scan ERP](https://scanerp.pro/), a QR-based ERP for CMT garment factories. These utilities power our own production system; published here so other factory developers can use them.
 
 ## What's Inside
 
@@ -59,7 +59,7 @@ Rates operator performance across four dimensions:
 
 Final rating = 1.0 + sum of all four adjustments.
 
-[Read full SMV guide on Scan ERP →](https://scan-erp.web.app/blog/sam-smv-calculation-garment-industry.html)
+[Read full SMV guide on Scan ERP →](https://scanerp.pro/blog/sam-smv-calculation-garment-industry.html)
 
 ## Piece-Rate Calculator
 
@@ -91,7 +91,7 @@ base = pieces × adjustedRate
 = gross wage
 ```
 
-[Read full piece-rate guide on Scan ERP →](https://scan-erp.web.app/blog/piece-rate-payment-calculation-garment-factory.html)
+[Read full piece-rate guide on Scan ERP →](https://scanerp.pro/blog/piece-rate-payment-calculation-garment-factory.html)
 
 ## Bundle ID Generator
 
@@ -119,7 +119,7 @@ This format encodes:
 - Bundle sequence (zero-padded to 3 digits)
 - Component code (FRT=Front, BK=Back, SLV=Sleeve, CLR=Collar, etc.)
 
-[Read full QR bundle tracking guide →](https://scan-erp.web.app/blog/qr-code-production-tracking-garment-factory.html)
+[Read full QR bundle tracking guide →](https://scanerp.pro/blog/qr-code-production-tracking-garment-factory.html)
 
 ## Use Cases
 
@@ -139,19 +139,19 @@ Powers daily operations at:
 
 ## Related Reading
 
-- [Garment Factory ERP System: Complete 2026 Guide](https://scan-erp.web.app/blog/garment-factory-erp-system-complete-guide.html)
-- [Real-Time Garment Production Tracking System](https://scan-erp.web.app/blog/garment-production-tracking-system-2026-guide.html)
-- [SMV Costing for CMT Pricing](https://scan-erp.web.app/blog/smv-costing-cmt-pricing-garment-factory.html)
-- [SAM Values Reference Table](https://scan-erp.web.app/blog/sam-values-basic-garments-reference-table.html)
-- [11 Questions to Ask Before Buying Garment Factory Software](https://scan-erp.web.app/blog/11-questions-before-buying-garment-factory-software.html)
+- [Garment Factory ERP System: Complete 2026 Guide](https://scanerp.pro/blog/garment-factory-erp-system-complete-guide.html)
+- [Real-Time Garment Production Tracking System](https://scanerp.pro/blog/garment-production-tracking-system-2026-guide.html)
+- [SMV Costing for CMT Pricing](https://scanerp.pro/blog/smv-costing-cmt-pricing-garment-factory.html)
+- [SAM Values Reference Table](https://scanerp.pro/blog/sam-values-basic-garments-reference-table.html)
+- [11 Questions to Ask Before Buying Garment Factory Software](https://scanerp.pro/blog/11-questions-before-buying-garment-factory-software.html)
 
 ## Try Scan ERP
 
-This toolkit is free. The full ERP system that uses these utilities (with QR scanning, dashboards, payments, hardware integration) is available at [scan-erp.web.app](https://scan-erp.web.app/).
+This toolkit is free. The full ERP system that uses these utilities (with QR scanning, dashboards, payments, hardware integration) is available at [scanerp.pro](https://scanerp.pro/).
 
-- 🌐 [Live demo](https://scan-erp.web.app/)
+- 🌐 [Live demo](https://scanerp.pro/)
 - 📱 WhatsApp: +977-9863618347
-- 💬 [Free 30-day trial](https://scan-erp.web.app/#contact)
+- 💬 [Free 30-day trial](https://scanerp.pro/#contact)
 
 ## Contributing
 
@@ -167,4 +167,4 @@ MIT — use freely in commercial and non-commercial projects.
 
 ---
 
-Built by [Santosh Rijal](https://github.com/drmcoder) — MBBS doctor and CMT factory owner. [Scan ERP](https://scan-erp.web.app/) is the full ERP system powered by these utilities.
+Built by [Santosh Rijal](https://github.com/drmcoder) — MBBS doctor and CMT factory owner. [Scan ERP](https://scanerp.pro/) is the full ERP system powered by these utilities.

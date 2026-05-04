@@ -14,7 +14,7 @@
  *   - Line balancing
  *   - CMT pricing
  *
- * Reference: https://scan-erp.web.app/blog/sam-smv-calculation-garment-industry.html
+ * Reference: https://scanerp.pro/blog/sam-smv-calculation-garment-industry.html
  *
  * @example
  *   const smv = calculateSMV({

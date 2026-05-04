@@ -17,7 +17,7 @@
     "sewing",
     "qr-code"
   ],
-  "homepage": "https://scan-erp.web.app",
+  "homepage": "https://scanerp.pro",
   "repository": {
     "type": "git",
     "url": "https://github.com/drmcoder/cmt-factory-toolkit.git"
@@ -27,7 +27,7 @@
   },
   "author": {
     "name": "Santosh Rijal",
-    "url": "https://scan-erp.web.app"
+    "url": "https://scanerp.pro"
   },
   "license": "MIT"
 }
