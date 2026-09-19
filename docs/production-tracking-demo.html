@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Garment Production Tracking Demo</title>
+  <meta name="description" content="Open-source garment production tracking demo showing bundle WIP, stage counts and stuck-bundle aging.">
+  <style>
+    body{font-family:system-ui,-apple-system,sans-serif;max-width:980px;margin:40px auto;padding:0 18px;color:#172033;background:#f7f9fc}
+    h1{margin-bottom:6px}.muted{color:#64748b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0}
+    .card{background:white;border:1px solid #dfe5ee;border-radius:12px;padding:16px}.big{font-size:28px;font-weight:700}
+    table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+    th,td{padding:11px;border-bottom:1px solid #e8edf3;text-align:left}th{background:#eef2f7}
+    code{background:#eef2f7;padding:2px 5px;border-radius:4px}.note{background:#fff;border-left:4px solid #64748b;padding:14px;margin-top:24px}
+  </style>
+</head>
+<body>
+  <h1>Garment Production Tracking Demo</h1>
+  <p class="muted">Static sample data · bundle-level WIP · no backend required</p>
+  <div id="cards" class="grid"></div>
+
+  <h2>Current bundles</h2>
+  <table>
+    <thead><tr><th>Bundle</th><th>Stage</th><th>Pieces</th><th>Line</th><th>Minutes idle</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <div class="note">
+    This is a deliberately small reference dashboard. The reusable event model lives in
+    <code>production-tracking/index.js</code>.
+    For a full production-floor implementation, see the
+    <a href="https://scanerp.pro/blog/garment-production-tracking-system-2026-guide.html?utm_source=github&utm_medium=referral&utm_campaign=cmt_factory_toolkit_demo">Scan ERP production tracking guide</a>.
+  </div>
+
+<script>
+const now = new Date('2026-09-19T10:00:00Z');
+const bundles = [
+  {id:'TSHIRT-2409-NAVY-M-001-FRT',stage:'SEWING',qty:20,line:'LINE-1',last:'2026-09-19T09:00:00Z'},
+  {id:'TSHIRT-2409-NAVY-L-002-FRT',stage:'SEWING',qty:20,line:'LINE-1',last:'2026-09-19T09:40:00Z'},
+  {id:'TSHIRT-2409-RED-M-003-FRT',stage:'QC',qty:15,line:'LINE-2',last:'2026-09-19T09:45:00Z'},
+  {id:'POLO-2410-BLACK-L-004-BK',stage:'FINISHING',qty:25,line:'LINE-3',last:'2026-09-19T09:30:00Z'}
+];
+const stages=['CUTTING','BUNDLING','SEWING','FINISHING','QC','PACKING'];
+const summary=Object.fromEntries(stages.map(s=>[s,{bundles:0,pieces:0}]));
+for(const b of bundles){summary[b.stage].bundles++;summary[b.stage].pieces+=b.qty;}
+document.getElementById('cards').innerHTML=stages.map(s=>`
+  <div class="card"><div class="muted">${s}</div><div class="big">${summary[s].pieces}</div><div>${summary[s].bundles} bundle(s)</div></div>`).join('');
+document.getElementById('rows').innerHTML=bundles.map(b=>{
+ const idle=Math.max(0,Math.floor((now-new Date(b.last))/60000));
+ return `<tr><td>${b.id}</td><td>${b.stage}</td><td>${b.qty}</td><td>${b.line}</td><td>${idle}</td></tr>`;
+}).join('');
+</script>
+</body>
+</html>
