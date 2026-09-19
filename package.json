@@ -1,7 +1,7 @@
 {
   "name": "cmt-factory-toolkit",
-  "version": "0.1.0",
-  "description": "Open-source utilities for CMT garment factory operations: SMV calculators, piece-rate formulas, bundle ID generators. Powered by Scan ERP.",
+  "version": "0.2.0",
+  "description": "Open-source utilities for CMT garment factories: SMV, piece-rate, bundle IDs, and event-based garment production tracking.",
   "main": "index.js",
   "keywords": [
     "garment",
@@ -15,7 +15,10 @@
     "production-tracking",
     "apparel",
     "sewing",
-    "qr-code"
+    "qr-code",
+    "wip",
+    "shop-floor",
+    "production-management"
   ],
   "homepage": "https://scanerp.pro",
   "repository": {
@@ -29,5 +32,8 @@
     "name": "Santosh Rijal",
     "url": "https://scanerp.pro"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "node test/production-tracker.test.js"
+  }
 }
